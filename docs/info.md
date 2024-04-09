@@ -9,12 +9,14 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-Explain how your project works
+This Project works by driving power to the Cols Columns one by one, then waits for any changes on the Rows (triggered by Human Input) and scans a case to find the combination between the row and col columns before finding the right combination and recording the corresponding key. 
+
+This key is passed on to a decode module that finds the correct Seven Segment combination and then passes it on to the 1 digit seven Segment Display where it is displayed.
 
 ## How to test
 
-Explain how to use your project
+Connect your keypad to the PMOD pins and experiment by clicking some buttons and seeing their outputs!
 
 ## External hardware
 
-List external hardware used in your project (e.g. PMOD, LED display, etc), if any
+Keypad PMOD: https://t.ly/lTZF0
