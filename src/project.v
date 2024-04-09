@@ -21,8 +21,10 @@ module tt_um_ian_keypad_controller (
   assign uio_oe  = 8'b00111111;
 
   assign uo_out[7] = 0;
-  assign reset = !rst_n;
+  wire reset = !rst_n;
   wire [3:0] key;
+
+  // the keypad scanner
   keypad keypad (
     .clk(clk),
     .reset(reset),
@@ -32,6 +34,7 @@ module tt_um_ian_keypad_controller (
     .key(key)
   );
   
+  // the digit decoder
   decoder decoder (
     .key(key),
     .segments(uo_out[6:0])
