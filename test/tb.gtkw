@@ -1,10 +1,10 @@
 [*]
 [*] GTKWave Analyzer v3.4.0 (w)1999-2022 BSI
-[*] Tue Apr  9 11:41:30 2024
+[*] Tue Apr  9 11:51:42 2024
 [*]
 [dumpfile] "/home/matt/work/asic-workshop/shuttle-2404/tt06-ian-keypad-controller/test/tb.vcd"
-[dumpfile_mtime] "Tue Apr  9 11:40:37 2024"
-[dumpfile_size] 7013
+[dumpfile_mtime] "Tue Apr  9 11:51:31 2024"
+[dumpfile_size] 7136
 [savefile] "/home/matt/work/asic-workshop/shuttle-2404/tt06-ian-keypad-controller/test/tb.gtkw"
 [timestart] 0
 [size] 1917 926
@@ -29,14 +29,16 @@ tb.uo_out[7:0]
 tb.uio_out[7:0]
 tb.uio_oe[7:0]
 tb.tt_um_ian_keypad_controller.keypad.col_update_count[4:0]
-@800023
+@800022
 tb.tt_um_ian_keypad_controller.keypad.cols[3:0]
-@29
+@28
 (0)tb.tt_um_ian_keypad_controller.keypad.cols[3:0]
 (1)tb.tt_um_ian_keypad_controller.keypad.cols[3:0]
 (2)tb.tt_um_ian_keypad_controller.keypad.cols[3:0]
 (3)tb.tt_um_ian_keypad_controller.keypad.cols[3:0]
-@1001201
+@23
+tb.tt_um_ian_keypad_controller.key[3:0]
+@1001200
 -group_end
 [pattern_trace] 1
 [pattern_trace] 0

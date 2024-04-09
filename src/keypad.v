@@ -7,10 +7,7 @@ module keypad(
     input [3:0] rows, // inputs
     output reg [3:0] cols, // outputs
     output reg [1:0] counter_cols,
-    output reg led_a,
-    output reg led_b,
-    output reg led_c,
-    output reg led_d
+    output reg [3:0] key
 );
 
 // Debounced Rows
@@ -94,108 +91,41 @@ task match_d; begin $display("D was clicked"); end endtask
 
 
 always @(*) begin
-    led_a = 1'b0;
-    led_b = 1'b0;
-    led_c = 1'b0;
-    led_d = 1'b0;
+    key = 0;
 
 
     if (cols == 4'b0001 && debounced_rows == 4'b0001) begin
- //       match_one();
-        led_a = 1'b0;
-        led_b = 1'b0;
-        led_c = 1'b0;
-        led_d = 1'b0;
+        key = 1;
     end else if (cols == 4'b0001 && debounced_rows == 4'b0010) begin
- //       match_four();
-        led_a = 1'b0;
-        led_b = 1'b0;
-        led_c = 1'b0;
-        led_d = 1'b0;
+        key = 4;
     end else if (cols == 4'b0001 && debounced_rows == 4'b0100) begin
-//        match_seven();
-        led_a = 1'b0;
-        led_b = 1'b0;
-        led_c = 1'b0;
-        led_d = 1'b0;
+        key = 7;
     end else if (cols == 4'b0001 && debounced_rows == 4'b1000) begin
-//        match_star();
-        led_a = 1'b0;
-        led_b = 1'b0;
-        led_c = 1'b0;
-        led_d = 1'b0;
+        key = 15;
     end else if (cols == 4'b0010 && debounced_rows == 4'b0001) begin
-//        match_two();
-        led_a = 1'b0;
-        led_b = 1'b0;
-        led_c = 1'b0;
-        led_d = 1'b0;
+        key = 2;
     end else if (cols == 4'b0010 && debounced_rows == 4'b0010) begin
-//        match_five();
-        led_a = 1'b0;
-        led_b = 1'b0;
-        led_c = 1'b0;
-        led_d = 1'b0;
+        key = 5;
     end else if (cols == 4'b0010 && debounced_rows == 4'b0100) begin
-//        match_eight();
-        led_a = 1'b0;
-        led_b = 1'b0;
-        led_c = 1'b0;
-        led_d = 1'b0;
+        key = 8;
     end else if (cols == 4'b0010 && debounced_rows == 4'b1000) begin
-//        match_zero();
-        led_a = 1'b0;
-        led_b = 1'b0;
-        led_c = 1'b0;
-        led_d = 1'b0;
+        key = 0;
     end else if (cols == 4'b0100 && debounced_rows == 4'b0001) begin
-//        match_three();
-        led_a = 1'b0;
-        led_b = 1'b0;
-        led_c = 1'b0;
-        led_d = 1'b0;
+        key = 3;
     end else if (cols == 4'b0100 && debounced_rows == 4'b0010) begin
-//        match_six();
-        led_a = 1'b0;
-        led_b = 1'b0;
-        led_c = 1'b0;
-        led_d = 1'b0;
+        key = 6;
     end else if (cols == 4'b0100 && debounced_rows == 4'b0100) begin
-//        match_nine();
-        led_a = 1'b0;
-        led_b = 1'b0;
-        led_c = 1'b0;
-        led_d = 1'b0;
+        key = 9;
     end else if (cols == 4'b0100 && debounced_rows == 4'b1000) begin
-//        match_hashtag();
-        led_a = 1'b0;
-        led_b = 1'b0;
-        led_c = 1'b0;
-        led_d = 1'b0;
+        key = 14;
     end else if (cols == 4'b1000 && debounced_rows == 4'b0001) begin
-//        match_a();
-        led_a = 1'b1;
-        led_b = 1'b0;
-        led_c = 1'b0;
-        led_d = 1'b0;
+        key = 10;
     end else if (cols == 4'b1000 && debounced_rows == 4'b0010) begin
-//        match_b();
-        led_a = 1'b0;
-        led_b = 1'b1;
-        led_c = 1'b0;
-        led_d = 1'b0;
+        key = 11;
     end else if (cols == 4'b1000 && debounced_rows == 4'b0100) begin
-//        match_c();
-        led_a = 1'b0;
-        led_b = 1'b0;
-        led_c = 1'b1;
-        led_d = 1'b0;
+        key = 12;
     end else if (cols == 4'b1000 && debounced_rows == 4'b1000) begin
-//        match_d();
-        led_a = 1'b0;
-        led_b = 1'b0;
-        led_c = 1'b0;
-        led_d = 1'b1;
+        key = 13;
     end
 end
 

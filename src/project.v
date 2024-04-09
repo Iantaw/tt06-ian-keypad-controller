@@ -20,13 +20,16 @@ module tt_um_ian_keypad_controller (
   assign uio_out[7:6] = 0;
   assign uio_oe  = 8'b00111111;
 
+  assign uo_out = 0;
   assign reset = !rst_n;
+  wire [3:0] key;
   keypad keypad (
     .clk(clk),
     .reset(reset),
-    .rows(ui_in[3:0]),
-    .cols(uio_out[3:0]),
-    .counter_cols(uio_out[5:4])
+    .rows(ui_in[3:0]), // input
+    .cols(uio_out[3:0]), // output
+    .counter_cols(uio_out[5:4]),
+    .key(key)
   );
 
 endmodule
