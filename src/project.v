@@ -18,7 +18,7 @@ module tt_um_ian_keypad_controller (
 
   // All output pins must be assigned. If not used, assign to 0.
   assign uio_out[7:6] = 0;
-  assign uio_oe  = 8b00111111;
+  assign uio_oe  = 8'b00111111;
 
   assign reset = !rst_n;
   keypad keypad (
