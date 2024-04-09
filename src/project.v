@@ -20,7 +20,7 @@ module tt_um_ian_keypad_controller (
   assign uio_out[7:6] = 0;
   assign uio_oe  = 8'b00111111;
 
-  assign uo_out[7] = 1;
+  assign uo_out[7] = 0;
   assign reset = !rst_n;
   wire [3:0] key;
   keypad keypad (
