@@ -1,34 +1,51 @@
 [*]
 [*] GTKWave Analyzer v3.4.0 (w)1999-2022 BSI
-[*] Tue Apr  9 11:51:42 2024
+[*] Tue Apr  9 12:56:16 2024
 [*]
 [dumpfile] "/home/matt/work/asic-workshop/shuttle-2404/tt06-ian-keypad-controller/test/tb.vcd"
-[dumpfile_mtime] "Tue Apr  9 11:51:31 2024"
-[dumpfile_size] 7136
+[dumpfile_mtime] "Tue Apr  9 12:51:06 2024"
+[dumpfile_size] 27652
 [savefile] "/home/matt/work/asic-workshop/shuttle-2404/tt06-ian-keypad-controller/test/tb.gtkw"
 [timestart] 0
 [size] 1917 926
-[pos] -1 -1
-*-28.134533 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[pos] 216 236
+*-30.234533 5970000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 [treeopen] tb.
 [treeopen] tb.tt_um_ian_keypad_controller.
 [treeopen] tb.tt_um_ian_keypad_controller.keypad.
 [sst_width] 333
-[signals_width] 387
+[signals_width] 546
 [sst_expanded] 1
 [sst_vpaned_height] 273
 @28
 tb.clk
 tb.rst_n
-@200
--Inputs
--Bidirectional Pins
--Output Pins
-@22
+@24
+tb.tt_um_ian_keypad_controller.key[3:0]
+@c00022
 tb.uo_out[7:0]
-tb.uio_out[7:0]
-tb.uio_oe[7:0]
-tb.tt_um_ian_keypad_controller.keypad.col_update_count[4:0]
+@28
+(0)tb.uo_out[7:0]
+(1)tb.uo_out[7:0]
+(2)tb.uo_out[7:0]
+(3)tb.uo_out[7:0]
+(4)tb.uo_out[7:0]
+(5)tb.uo_out[7:0]
+(6)tb.uo_out[7:0]
+(7)tb.uo_out[7:0]
+@22
+tb.tt_um_ian_keypad_controller.keypad.debounced_rows[3:0]
+@1401200
+-group_end
+@800200
+-row col
+@800022
+tb.tt_um_ian_keypad_controller.keypad.rows[3:0]
+@28
+(0)tb.tt_um_ian_keypad_controller.keypad.rows[3:0]
+(1)tb.tt_um_ian_keypad_controller.keypad.rows[3:0]
+(2)tb.tt_um_ian_keypad_controller.keypad.rows[3:0]
+(3)tb.tt_um_ian_keypad_controller.keypad.rows[3:0]
 @800022
 tb.tt_um_ian_keypad_controller.keypad.cols[3:0]
 @28
@@ -36,9 +53,10 @@ tb.tt_um_ian_keypad_controller.keypad.cols[3:0]
 (1)tb.tt_um_ian_keypad_controller.keypad.cols[3:0]
 (2)tb.tt_um_ian_keypad_controller.keypad.cols[3:0]
 (3)tb.tt_um_ian_keypad_controller.keypad.cols[3:0]
-@23
-tb.tt_um_ian_keypad_controller.key[3:0]
 @1001200
 -group_end
+-group_end
+@1000200
+-row col
 [pattern_trace] 1
 [pattern_trace] 0
